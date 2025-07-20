@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Min-Zhi Jiang</title>
+  <!-- please go to: https://fonts.google.com/ for more font, copy font path to here -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mainPage_styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Min-Zhi Jiang</h1>
+      <p>Biostatistic Scientist • Cat Lover</p>
+    </header>
 
+    <div class="intro">
+      <p>- Over 10 years experience on biostatistics -</p>
+      <p>- Capturing life through the lens -</p>
+    </div>
+<!-- Three buttons link to About Me, Projects, Publications -->
+    <div class="buttons">
+      <a href="aboutMe.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+    </div>
+    
+    <footer>
+      &copy; <span id="year"></span> Min-Zhi Jiang. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // automatically update the year of copyright
+     document.getElementById('year').textContent = new Date().getFullYear();
+    // automatically update content, invoke updates.json. update json everytime
+    fetch('updates.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('update-container');
+        container.innerHTML = '';
+        data.forEach(update => {
+          const item = document.createElement('div');
+          item.className = 'update-item';
+          item.innerHTML = `Updated <strong>${update.category}</strong> – ${update.message}`;
+          container.appendChild(item);
+        });
+      })
+      .catch(error => {
+        document.getElementById('update-container').innerHTML = '<p>Could not load updates.</p>';
+        console.error('Error loading updates:', error);
+      });
+  </script>
+</body>
+</html>
