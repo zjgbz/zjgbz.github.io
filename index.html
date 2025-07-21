@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Min-Zhi Jiang</title>
+  <!-- please go to: https://fonts.google.com/ for more font, copy font path to here -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mainPage_styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="container-wrapper">
+      <header>
+        <h1>Min-Zhi Jiang</h1>
+        <p>Biostatistic Scientist • Cat's Friend</p>
+      </header>
+  <!-- uncomment if you wanna add more introduction of your website
+      <div class="intro">
+        <p>- Over 10 years experience on biostatistics -</p>
+        <p>- Capturing life through the lens -</p>
+      </div>
+  -->
+  <!-- Three buttons link to About Me, Projects, Publications -->
+      <div class="buttons">
+        <a href="aboutMe.html">About Me</a>
+        <a href="projects.html">Researches</a>
+        <a href="publications.html">Publications</a>
+        <!-- you can add more buttons later, please refer to the correct sub html -->
+      </div>
+      
+      <footer>
+        &copy; <span id="year"></span> Min-Zhi Jiang. All rights reserved.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // automatically update the year of copyright
+     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

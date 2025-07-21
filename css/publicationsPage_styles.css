@@ -1,0 +1,185 @@
+/* css/cv.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('../images/mainBG1.jpg') no-repeat center center fixed;
+    background-size: cover;   /* 让背景铺满屏幕 */
+    color: #333;
+}
+
+/* 禁用数字链接样式 */
+a[href^="tel"] {
+    text-decoration: none;
+    color: inherit;
+    pointer-events: none;
+    cursor: default;
+}
+
+.cv-container {
+    background-color: rgba(255,255,255,0.5); /* 半透明白色背景 */
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    line-height: 1.5;
+}
+/* --------------------- font first! -------------------------- */
+/* header name, currently disabled h1 */
+h1 {
+    margin: 20px auto 10px auto;
+    color: #BB6830;
+    font-weight: 600;
+}
+/* section name */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px auto 10px auto;
+}
+/* working or published paper */
+h3 {
+    color: #A95C29;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px auto 5px auto;
+}
+
+/* Download PDF button */
+.download-button {
+    background-color: #BB6830;
+    vertical-align: baseline; /* 或 baseline/top，根据需要调整 */
+    position: relative;
+    top: -1px;  /* 上移 2 像素，可根据需求微调 */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.download-button:hover {
+    background-color: #F8D794;
+    color: #BB6830;
+}
+.publications .download-button {
+    padding: 3px 8px;
+    font-size: 0.55rem;
+}
+
+/* ------------------ Publications layout ----------------------- */
+/* publication, looks like citation */
+.publication-item {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 12px auto 12px auto;
+}
+/* Back button */
+.back-container {
+    margin: 10px auto 40px auto;
+    text-align: center; /* 容器居中对齐 */
+}
+.back-button {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 22px;
+    text-decoration: none;
+    background-color: #F8D794;
+    color: #BB6830;
+    font-weight: 550;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+    transition: background 0.3s, transform 0.3s;
+}
+.back-button:hover {
+    background-color: #BB6830;
+    color: #F8D794;
+    font-weight: 550;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+    transform: scale(1.05);
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: #F8D794;
+    color: #BB6830;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover {
+    background-color: #BB6830;
+    color: #F8D794;
+    font-weight: 300;
+    transform: scale(1.1);
+}
+
+footer {
+    position: static;  /* 让footer变为文档流的一部分 */
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.1); /* black background, transparence 0.2 */
+        border-radius: 8px;
+        padding: 0px
+        margin: 5px 0px 15px 0px;
+    }
+    .publications {
+        flex-direction: column;
+        flex: 1 1 100%;
+        padding: 12px 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        background: rgba(255,255,255,0.6);
+        border-radius: 8px;
+        margin: 10px 1px 5px 1px;
+    }
+    .h3 {
+        font-size: 16px;
+    }
+    .publication-item {
+        font-size: 15px;
+    }
+    .download-button {
+        padding: 4px 8px;
+        font-size: 0.7rem; /* 更小按钮尺寸 */
+        margin: 4px; /* 增加间距防止拥挤 */
+    }
+    .back-button {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        padding: 8px 8px;
+        font-size: 14px;
+        z-index: 1000;
+    }
+    .footer {
+        position: static;  /* 让footer变为文档流的一部分 */
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        font-size: 8px;
+        margin-top: 5px;  /* 给footer和上面内容一些间距 */
+      }
+}

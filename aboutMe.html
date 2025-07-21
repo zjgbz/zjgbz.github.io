@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Min-Zhi Jiang</title>
+    <!--font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- style css in css folder -->
+    <link rel="stylesheet" href="css/aboutmePage_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DR. MIN-ZHI JIANG</h1>
+            <h2>Department of Biostatistics</h2>
+            <h2>Johns Hopkins Bloomberg School of Public Health</h2>
+            <div class="contact-buttons">
+                <a href="https://github.com/zjgbz" target="_blank">
+                    <i class="fab fa-github"></i><span class="btn-text"> GitHub</span>
+                </a>
+            
+                <a href="https://orcid.org/0000-0001-5502-063X" target="_blank">
+                    <i class="fab fa-orcid"></i><span class="btn-text"> ORCID</span>
+                </a>
+                
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=BZzscAIAAAAJ" target="_blank">
+                    <i class="fas fa-graduation-cap"></i><span class="btn-text"> Google Scholar</span>
+                </a>
+                
+                <a href="mailto:mjiang26@jhu.edu">
+                    <i class="fas fa-envelope"></i><span class="btn-text"> Email</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- EDUCATION 区块 -->
+        <section class="education">
+            <h3>EDUCATION</h3>
+            <div class="edu-item">
+                <h4>University of North Carolina at Chapel Hill, Chapel Hill, NC</h4>
+                <span class="date">Aug 2016 - Dec 2022</span> — 
+                <span class="degree">Ph.D. in Materials Science</span>
+            </div>
+            <div class="edu-item">
+                <h4>New York University, New York, NY</h4>
+                <span class="date">Sep 2013 - Aug 2016</span> — 
+                <span class="degree">M.S. in Physics</span>
+            </div>
+            <div class="edu-item">
+                <h4>Nanjing University - Kuang Yaming Honors School, Nanjing, Jiangsu, China</h4>
+                <span class="date">Sep 2008 - Jun 2012</span> — 
+                <span class="degree">B.S. in Physics</span>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE 区块 -->
+        <section class="work">
+            <h3>WORK EXPERIENCE</h3>
+            <div class="work-item">
+                <h4>Johns Hopkins Bloomberg School of Public Health, Department of Biostatistics</h4>
+                <span class="date">Jun 2023 - Present</span> — 
+                <span class="job">Postdoctoral Fellow</span>
+            </div>
+            <div class="work-item">
+                <h4>University of North Carolina at Chapel Hill, Department of Genetics</h4>
+                <span class="date">Dec 2022 - May 2023</span> — 
+                <span class="job">Postdoctoral Fellow</span>
+            </div>
+        </section>
+        
+        <!-- SKILLS BLOCK -->
+        <section class="skills">
+            <h3>SKILL CARD</h3>
+            <div class="skill-item">
+                <strong>Bioinformatics Tools:</strong>
+                <p>NHLBI BioData Catalyst Platform (with API control), Genome STRiP, Minimac4, BEAGLE</p>
+            </div>
+            <div class="skill-item">
+                <strong>AI Agent:</strong>
+                <p>openai-agents-python, LangChain</p>
+            </div>
+            <div class="skill-item">
+                <strong>Programming Languages:</strong>
+                <p>Python, R, MatLab, C, Bash/Zsh Scripting</p>
+            </div>
+            <div class="skill-item">
+                <strong>Frameworks and Libraries:</strong>
+                <p>PyTorch, Numpy, Matplotlib, Scipy, Cython, scikit-learn, Pandas, Seurat, Scanpy</p>
+            </div>
+            <div class="skill-item">
+                <strong>Supporting Skills:</strong>
+                <p>Git, LATEX, Jupyter Lab, Microsoft Office</p>
+            </div>
+        </section>
+
+        <!-- Back to Home Button -->
+        <div class="back-container">
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+
+      <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+    
+      <footer>
+          &copy; <span id="year"></span> Min-Zhi Jiang. All rights reserved.
+      </footer>
+    
+      <script>
+          document.getElementById('year').textContent = new Date().getFullYear();
+          window.onscroll = function() { scrollFunction(); };
+          function scrollFunction() {
+              const btn = document.getElementById("scrollTopBtn");
+              if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                  btn.style.display = "block";
+              } else {
+                  btn.style.display = "none";
+              }
+          }
+          function scrollToTop() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+      </script>
+</body>
+</html>
