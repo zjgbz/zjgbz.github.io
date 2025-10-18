@@ -85,14 +85,14 @@ h3 {
 
 /* for working publication item */
 .working-item {
-    counter-increment: pub-counter;
+    counter-increment: work-counter;
     font-size: 16px;
     line-height: 1.5;
     margin: 12px auto 12px auto;
 }
 /* auto count pulication number */
 .working-item::before {
-    content: counter(pub-counter) ". ";
+    content: counter(work-counter) ". ";
     font-weight: bold;
 }
 
