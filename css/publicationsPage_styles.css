@@ -102,20 +102,23 @@ h3 {
     text-align: center; /* 容器居中对齐 */
 }
 .back-button {
-    display: inline-block;
-    padding: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
     border-radius: 22px;
     text-decoration: none;
     background-color: #F8D794;
     color: #BB6830;
-    font-weight: 550;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 .back-button:hover {
     background-color: #BB6830;
     color: #F8D794;
-    font-weight: 550;
+    font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
     transform: scale(1.05);
 }
@@ -192,6 +195,7 @@ footer {
         bottom: 15px;
         padding: 8px 8px;
         font-size: 14px;
+        opacity: 0.8;
         z-index: 1000;
     }
     .footer {
