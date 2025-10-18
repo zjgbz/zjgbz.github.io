@@ -243,6 +243,7 @@ footer {
         bottom: 15px;
         padding: 8px 8px;
         font-size: 14px;
+        opacity: 0.8;
         z-index: 1000;
     }
     .footer {
