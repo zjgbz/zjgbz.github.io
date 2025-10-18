@@ -83,6 +83,19 @@ h3 {
     font-weight: bold;
 }
 
+/* for working publication item */
+.working-item {
+    counter-increment: pub-counter;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 12px auto 12px auto;
+}
+/* auto count pulication number */
+.working-item::before {
+    content: counter(pub-counter) ". ";
+    font-weight: bold;
+}
+
 /* Back button */
 .back-container {
     margin: 10px auto 40px auto;
@@ -164,7 +177,7 @@ footer {
     .h3 {
         font-size: 16px;
     }
-    .publication-item {
+    .publication-item, .working-item {
         font-size: 15px;
     }
     .download-button {
