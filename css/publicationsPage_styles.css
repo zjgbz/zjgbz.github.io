@@ -72,6 +72,7 @@ h3 {
 /* ------------------ Publications layout ----------------------- */
 /* publication, looks like citation */
 .publication-item {
+    counter-increment: pub-counter;
     font-size: 16px;
     line-height: 1.5;
     margin: 12px auto 12px auto;
