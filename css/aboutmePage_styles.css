@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background: url('https://content.jiangminzhi.com/background/mainBG1.jpg') no-repeat center center fixed;
+    background: url('https://content.jiangminzhi.com/background/mainBG2.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -256,11 +256,11 @@ footer {
         z-index: 1000;
     }
     .footer {
-        position: static;  /* 让footer变为文档流的一部分 */
+        position: static;
         bottom: auto !important;
         left: auto !important;
         right: auto !important;
         font-size: 8px;
-        margin-top: 5px;  /* 给footer和上面内容一些间距 */
+        margin-top: 5px; 
       }
 }
