@@ -130,43 +130,7 @@
           function scrollToTop() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
           }
-        // check if resume pdf exist, if not, do not download, but pop up a window
-document.addEventListener("DOMContentLoaded", function () {
-  const cvButton = document.querySelector(".download-cv");
-  if (!cvButton) return;
-
-  const isPdf = (res) => {
-    const ct = (res.headers.get("content-type") || "").toLowerCase();
-    return res.ok && ct.includes("application/pdf");
-  };
-
-  cvButton.addEventListener("click", async function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    const cvUrl = new URL(cvButton.getAttribute("href"), location.origin).href;
-
-    try {
-      let res = await fetch(cvUrl, { method: "HEAD", cache: "no-store" });
-
-      if (!isPdf(res)) {
-        res = await fetch(cvUrl, {
-          method: "GET",
-          headers: { Range: "bytes=0-0" },
-          cache: "no-store",
-        });
-      }
-
-      if (isPdf(res)) {
-        window.location.href = cvUrl;
-      } else {
-        alert("Oops, not ready yet!");
-      }
-    } catch (e) {
-      alert("Oops, not ready yet!");
-    }
-  });
-});
+          
       </script>
 </body>
 </html>
