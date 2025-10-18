@@ -60,7 +60,7 @@ h4 {
     display: inline-block;
 }
 
-h4 .details-button {
+h4 .details-button, .website-button {
     display: inline-block;
     margin-left: 4px;
     vertical-align: baseline;
@@ -76,7 +76,7 @@ h4 .details-button {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-h4 .details-button:hover {
+h4 .details-button:hover, .website-button:hover {
     background-color: #F8D794;
     color: #BB6830;
 }
