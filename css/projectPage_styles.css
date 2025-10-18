@@ -243,8 +243,11 @@ footer {
         bottom: 15px;
         padding: 8px 8px;
         font-size: 14px;
-        opacity: 0.8;
+        opacity: 0.75;
         z-index: 1000;
+    }
+    #scrollTopBtn {
+        opacity: 0.75;
     }
     .footer {
         position: static;  /* 让footer变为文档流的一部分 */
